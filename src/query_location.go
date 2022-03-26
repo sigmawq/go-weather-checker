@@ -46,8 +46,6 @@ func queryLocation(city string, apiKey string) LocationQueryResult {
 		return LocationQueryResult{Success: false, FailiureReason: "Read failed"}
 	}
 
-	fmt.Println(string(body))
-
 	var responseRaw map[string]interface{}
 	json.Unmarshal(body, &responseRaw)
 	errorMessage, ok := checkResponse(responseRaw)
@@ -62,8 +60,6 @@ func queryLocation(city string, apiKey string) LocationQueryResult {
 		return LocationQueryResult{Success: false, FailiureReason: "Location not found"}
 	}
 	location := locations[0]
-
-	// fmt.Println(string(body))
 
 	return LocationQueryResult{Result: location, Success: true}
 }
