@@ -10,6 +10,7 @@ A simple tool for checking weather in any given location. Calls to https://openw
 `config.txt` that is located in this repo is config template. You can use it.
 
 ### Usage
-`weather <location> [extended]`
+`weather <location> [metric | imperial] [extended]`
 By default the app provides only a short and basic weather description.
-Exetended version provides more info (WIP).
+Exetended version provides more info.
+Default unit of measure is metric.
